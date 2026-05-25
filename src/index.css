@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Playfair Display", Georgia, serif;
+  
+  /* ScribeStone Custom Soft Palette Theme Colors */
+  --color-stone-bg: #F8F7F4;
+  --color-stone-primary: #3E5C4B;
+  --color-stone-primary-hover: #2F4739;
+  --color-stone-accent: #C8A97E;
+  --color-stone-accent-hover: #B8996E;
+  --color-stone-charcoal: #1F1F1F;
+}
+
+/* Custom Base Overrides for Premium Aesthetic */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-stone-bg);
+  color: var(--color-stone-charcoal);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar for Sleek Interaction */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3F1ED;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9D6CE;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C8A97E;
+}
+
+/* Elegant Fade-in Page Animations */
+.animate-soft-fade {
+  animation: softFadeIn 0.5s ease-out forwards;
+}
+
+@keyframes softFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
